@@ -5,9 +5,10 @@
 
 :root {
     --color-light: #efefef;
+    --color-grey: #cfcfea;
     --color-dark: #0e0e0e;
     --color-banner: #0e0e0e66;
-    --color-highlight: #6c935e;
+    --color-highlight: #5a7a4f;
     font-size: 1vh;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -31,13 +32,13 @@ body {
     flex-basis: content;
     flex: content;
 
-    > img {
+    >img {
         flex: 1;
         flex-basis: 100%;
         height: auto;
     }
 
-    .logo {
+    >.logo {
         position: absolute;
         top: 20%;
         left: 0;
@@ -50,14 +51,14 @@ body {
         justify-content: center;
         align-items: center;
     
-        > img {
+        >img {
             height: 15rem;
             width: auto;
             opacity: 1;
             margin: 1%;
         }
     
-        > span {
+        >span {
             font-family: "Norse Bold", sans-serif;
             width: 20%;
             font-size: 10rem;
@@ -73,7 +74,7 @@ body {
         color: color-mix(in srgb, var(--color-light) 75%, black);
         font-size: 1.8rem;
 
-        > a {
+        >a {
             color: inherit;
         }
     }
@@ -83,4 +84,76 @@ body {
     height: 100%;
     flex: auto;
     background-color: var(--color-light);
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2%;
+    align-items: start;
+
+    >p {
+        margin: 0 5%;
+        font-size: 2rem;
+        font-weight: 500;
+
+        > emph {
+            font-style: italic;
+        }
+    }
+
+    >div {
+        background-color: white;
+        width: 100%;
+        margin: 3% 0;
+        padding: 2% 5%;
+        display: grid;
+        grid-template-columns: 25rem 25rem;
+        column-gap: 5rem;
+        box-shadow: 0 0.5rem 1rem var(--color-grey);
+        box-sizing: border-box;
+
+        >span {
+            font-size: 2rem;
+            font-weight: 500;
+            grid-column: 1 / span 2;
+            margin-bottom: 3%;
+        }
+
+        >label {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            word-spacing: 0.3rem;
+
+            >input {
+                width: 20rem;
+                padding: 0.2rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    >button {
+        background-color: var(--color-highlight);
+        color: var(--color-light);
+        border: none;
+        border-radius: 5%;
+        margin: 0 5%;
+        padding: 1.5rem 5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    >span {
+        color: var(--color-dark);
+        margin: 0 5%;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        >a {
+            color: var(--color-highlight);
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
 }

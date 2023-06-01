@@ -96,10 +96,6 @@ body {
         margin: 0 var(--main-text-shift);
         font-size: 2rem;
         font-weight: 500;
-
-        > emph {
-            font-style: italic;
-        }
     }
 
     >div {

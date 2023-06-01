@@ -146,7 +146,7 @@ body {
         }
     }
 
-    >button {
+    >input[type=submit] {
         background-color: var(--color-highlight);
         color: var(--color-light);
         border: none;
